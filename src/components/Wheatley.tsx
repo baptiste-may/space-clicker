@@ -12,10 +12,10 @@ export default function Wheatley({onClickAction}: {
         const useXAxis = Math.random() < 0.5;
         const positivDirection = Math.random() < 0.5;
 
-        const x = useXAxis ? (positivDirection ? 100 : 0) : randomNumber(0, 100);
-        const y = useXAxis ? randomNumber(0, 100) : (positivDirection ? 100 : 0);
-        const endX = useXAxis ? (positivDirection ? 0 : 100) : randomNumber(0, 100);
-        const endY = useXAxis ? randomNumber(0, 100) : (positivDirection ? 0 : 100);
+        const x = useXAxis ? (positivDirection ? 100 : 0) : randomNumber(10, 90);
+        const y = useXAxis ? randomNumber(10, 90) : (positivDirection ? 100 : 0);
+        const endX = useXAxis ? (positivDirection ? 0 : 100) : randomNumber(10, 90);
+        const endY = useXAxis ? randomNumber(10, 90) : (positivDirection ? 0 : 100);
         const rotation = randomNumber(0, 360);
         const delay = randomNumber(25, 45);
 
@@ -59,6 +59,7 @@ export default function Wheatley({onClickAction}: {
             whileTap={{
                 scale: 0.9
             }}
+            draggable={false}
         />
     );
 }

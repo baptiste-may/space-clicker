@@ -28,6 +28,8 @@ export default function SpaceCore({onClickAction}: {
                             duration: 0.1
                         }
                     }}
-                    onClick={onClickAction}/>
+                    onClick={onClickAction}
+                    draggable={false}
+        />
     );
 }
