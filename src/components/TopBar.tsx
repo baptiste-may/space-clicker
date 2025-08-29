@@ -75,7 +75,7 @@ export function TopBar() {
                                 <H1 content="Space!"/>
                                 <H2 content="Settings"/>
                                 <div className="flex flex-col">
-                                    <div className="input-grid items-end px-4 py-2">
+                                    <div className="relative input-grid items-end px-4 py-2">
                                         <span className="text-2xl">Volume</span>
                                         <input className="h-4" type="range" min={0} max={100} value={valueVolume}
                                                onChange={event => {
@@ -83,6 +83,9 @@ export function TopBar() {
                                                    setValueVolume(volume);
                                                    setVolume(volume);
                                                }}/>
+                                        <div className="range-progress" style={{
+                                            width: `calc((100% / 2 - 16px) * ${valueVolume / 100})`
+                                        }}/>
                                     </div>
                                     <div
                                         className="input-grid items-center px-4 py-2 [&_svg]:hidden [&:hover_svg]:flex">
