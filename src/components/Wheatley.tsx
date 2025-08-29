@@ -1,9 +1,9 @@
 import {motion, useAnimate} from "motion/react";
-import {useEffect} from "react";
+import {MouseEventHandler, useEffect} from "react";
 import {randomNumber} from "@/lib/utils";
 
 export default function Wheatley({onClickAction}: {
-    onClickAction: () => void;
+    onClickAction: MouseEventHandler<HTMLImageElement>;
 }) {
 
     const [scope, animate] = useAnimate();

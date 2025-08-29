@@ -4,6 +4,7 @@ import {ReactNode} from "react";
 import {DM_Sans} from "next/font/google";
 import {TopBar} from "@/components/TopBar";
 import {SoundsProvider} from "@/hooks/useSounds";
+import {ClickAnimationProvider} from "@/hooks/useClickAnimation";
 
 const font = DM_Sans({
     subsets: ["latin"]
@@ -22,10 +23,12 @@ export default function RootLayout({
     return (
         <html lang="en" className={font.className}>
         <body className="relative w-screen h-screen bg-black bg-[url(/bg.webp)] bg-center select-none overflow-hidden">
-        <SoundsProvider>
-            <TopBar/>
-            {children}
-        </SoundsProvider>
+        <ClickAnimationProvider>
+            <SoundsProvider>
+                <TopBar/>
+                {children}
+            </SoundsProvider>
+        </ClickAnimationProvider>
         </body>
         </html>
     );

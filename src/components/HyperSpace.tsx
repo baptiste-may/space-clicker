@@ -1,6 +1,7 @@
 "use client";
 
 import {Button} from "@/components/Button";
+import {MouseEventHandler} from "react";
 
 function Sphere({type}: {
     type: null | "blue" | "orange"
@@ -13,7 +14,7 @@ function Sphere({type}: {
 
 export default function HyperSpace({value, onClickAction}: {
     value: number;
-    onClickAction: () => void;
+    onClickAction: MouseEventHandler<HTMLButtonElement>;
 }) {
 
     const isReady = value >= 100;

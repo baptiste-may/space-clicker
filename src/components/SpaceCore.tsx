@@ -1,9 +1,10 @@
 "use client";
 
 import {motion} from "motion/react";
+import {MouseEventHandler} from "react";
 
 export default function SpaceCore({onClickAction}: {
-    onClickAction: () => void;
+    onClickAction: MouseEventHandler<HTMLImageElement>;
 }) {
     return (
         <motion.img src="/space-core.webp" alt="" width={200} height={205}
