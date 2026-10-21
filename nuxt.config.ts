@@ -4,6 +4,8 @@ const umamiHost = process.env.NUXT_UMAMI_HOST ?? process.env.NUXT_PUBLIC_UMAMI_H
 const umamiId = process.env.NUXT_UMAMI_ID ?? process.env.NUXT_PUBLIC_UMAMI_ID;
 
 export default defineNuxtConfig({
+  // Keep the Nuxt 3-style directory structure with the app code at the project root.
+  srcDir: ".",
   compatibilityDate: "2026-03-03",
   modules: ["@nuxt/fonts", "nuxt-umami", "@nuxt/eslint"],
   fonts: {
@@ -29,12 +31,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   css: ["~/assets/css/main.css"],
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-    },
-  ],
   app: {
     head: {
       title: "Space!",

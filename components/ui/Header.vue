@@ -1,11 +1,12 @@
-<script lang="ts" setup>
-const isOpen = ref(false);
+<script setup lang="ts">
+const { openInfoModal, isInfoModalOpen } = useGame();
 </script>
 
 <template>
   <button
     class="absolute top-4 right-4 bg-white rounded cursor-pointer"
-    @click="isOpen = true"
+    aria-label="Open settings"
+    @click="openInfoModal"
   >
     <img
       alt=""
@@ -13,11 +14,7 @@ const isOpen = ref(false);
     />
   </button>
   <Transition name="fade">
-    <InfoModal
-      v-if="isOpen"
-      :close="() => (isOpen = false)"
-      :open="isOpen"
-    />
+    <ModalInfo v-if="isInfoModalOpen" />
   </Transition>
 </template>
 

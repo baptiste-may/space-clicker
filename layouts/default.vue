@@ -2,9 +2,9 @@
   <div
     class="relative w-screen h-screen bg-black bg-[url(/bg.webp)] bg-center select-none overflow-hidden"
   >
-    <ClickAnimationProvier>
-      <Header />
+    <ProviderClickAnimation>
+      <UiHeader />
       <slot />
-    </ClickAnimationProvier>
+    </ProviderClickAnimation>
   </div>
 </template>

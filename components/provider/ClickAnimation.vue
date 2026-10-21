@@ -3,7 +3,7 @@ const { animations } = useClickAnimation();
 </script>
 
 <template>
-  <ClickAnimation
+  <GameClickAnimation
     v-for="(data, id) in animations"
     :key="id"
     :value="data[0]"

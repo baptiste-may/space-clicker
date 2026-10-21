@@ -21,10 +21,10 @@ const addScore = (
 </script>
 
 <template>
-  <Wheatley :click="(e) => addScore(3, 'wheatley', e.clientX, e.clientY)" />
-  <SpaceCore :click="(e) => addScore(1, 'short', e.clientX, e.clientY)" />
-  <Score />
-  <HyperSpace
+  <CoreWheatley :click="(e) => addScore(3, 'wheatley', e.clientX, e.clientY)" />
+  <CoreSpace :click="(e) => addScore(1, 'short', e.clientX, e.clientY)" />
+  <GameScore />
+  <GameHyperSpace
     :click="
       (e) => {
         if (hyperspace === 100) addScore(randomNumber(25, 75), 'long', e.clientX, e.clientY, true);

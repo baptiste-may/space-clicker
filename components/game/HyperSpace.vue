@@ -12,18 +12,18 @@ const isReady = computed(() => hyperspace.value >= 100);
     class="absolute flex flex-col items-center gap-4 left-1/2 top-[calc(50%+150px)] -translate-x-1/2"
   >
     <div class="flex gap-2">
-      <HyperSpaceSphere
+      <GameHyperSpaceSphere
         v-for="i in 10"
         :key="i"
         :type="isReady ? 'yellow' : hyperspace / 100 > i / 10 ? 'blue' : null"
       />
     </div>
     <Transition name="fade">
-      <Button
+      <UiButton
         v-if="isReady"
         :disabled="!isReady"
         @click="click"
-        >Use Hyperspace</Button
+        >Use Hyperspace</UiButton
       >
     </Transition>
   </div>
