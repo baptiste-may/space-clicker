@@ -3,5 +3,5 @@ const { closeInfoModal } = useGame();
 </script>
 
 <template>
-  <UiButton @click="closeInfoModal">Close</UiButton>
+  <UButton @click="closeInfoModal">Close</UButton>
 </template>

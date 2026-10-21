@@ -1,5 +1,5 @@
 <template>
-  <div class="relative grid grid-cols-4 grid-rows-5">
+  <div class="relative grid grid-cols-4 grid-rows-5 w-max">
     <div
       v-for="i in 4 * 5"
       :key="i"

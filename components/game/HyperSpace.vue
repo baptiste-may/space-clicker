@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  click: (event: PointerEvent) => void;
+  click: (event: MouseEvent) => void;
 }>();
 
 const { hyperspace } = useGame();
@@ -19,11 +19,11 @@ const isReady = computed(() => hyperspace.value >= 100);
       />
     </div>
     <Transition name="fade">
-      <UiButton
+      <UButton
         v-if="isReady"
         :disabled="!isReady"
         @click="click"
-        >Use Hyperspace</UiButton
+        >Use Hyperspace</UButton
       >
     </Transition>
   </div>

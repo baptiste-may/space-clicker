@@ -1,36 +1,28 @@
 <script setup lang="ts">
-const { openInfoModal, isInfoModalOpen } = useGame();
+const { openInfoModal } = useGame();
 </script>
 
 <template>
-  <button
-    class="absolute top-4 right-4 bg-white rounded cursor-pointer"
+  <UButton
+    class="absolute top-4 right-4"
+    square
+    color="neutral"
+    variant="ghost"
     aria-label="Open settings"
+    :ui="{ base: 'p-0 rounded-[4px] bg-white hover:bg-white active:bg-white cursor-pointer' }"
     @click="openInfoModal"
   >
     <img
       alt=""
       src="/cake.png"
     />
-  </button>
-  <Transition name="fade">
-    <ModalInfo v-if="isInfoModalOpen" />
-  </Transition>
+  </UButton>
+  <ModalInfo />
 </template>
 
 <style scoped>
 img {
   width: 50px;
   height: 50px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

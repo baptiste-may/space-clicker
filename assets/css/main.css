@@ -1,7 +1,13 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 @theme {
   --font-sans: "Saira Extra Condensed", "Arial Narrow", "Liberation Sans Narrow", sans-serif;
+}
+
+:root {
+  --ui-radius: 0;
+  --ui-bg: transparent;
 }
 
 .input-grid {
