@@ -3,7 +3,7 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <button class="absolute top-4 right-4 bg-white" @click="isOpen = true">
+  <button class="absolute top-4 right-4 bg-white rounded cursor-pointer" @click="isOpen = true">
     <img alt="" src="/cake.png">
   </button>
   <Transition name=fade>

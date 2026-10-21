@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-3xl uppercase font-bold px-4 mt-8 mb-4">
+  <h2 class="text-4xl uppercase font-bold text-neutral-500 border-b border-neutral-500 mx-2 px-2 mt-8">
     <slot/>
   </h2>
 </template>

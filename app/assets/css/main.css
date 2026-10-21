@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-family: "DM", "Inter", sans-serif;
+    --font-sans: "Saira Extra Condensed", "Arial Narrow", "Liberation Sans Narrow", sans-serif;
 }
 
 .input-grid {

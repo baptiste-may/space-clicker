@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
   <Transition>
     <span v-if="appear"
-          class="absolute text-orange-600 font-mono text-shadow-lg text-2xl -translate-1/2 pointer-events-none z-50"
+          class="absolute text-orange-600 text-shadow-lg text-2xl -translate-1/2 pointer-events-none z-50"
     >+{{
         value
       }}</span>
