@@ -1,8 +1,17 @@
 <script lang="ts" setup>
 defineProps({
-  value: Number,
-  x: String,
-  y: String
+  value: {
+    type: Number,
+    default: 0,
+  },
+  x: {
+    type: String,
+    default: "0px",
+  },
+  y: {
+    type: String,
+    default: "0px",
+  },
 });
 
 const appear = ref(true);
@@ -20,11 +29,11 @@ onMounted(() => {
 
 <template>
   <Transition>
-    <span v-if="appear"
-          class="absolute text-orange-600 text-shadow-lg text-2xl -translate-1/2 pointer-events-none z-50"
-    >+{{
-        value
-      }}</span>
+    <span
+      v-if="appear"
+      class="absolute text-orange-600 text-shadow-lg text-2xl -translate-1/2 pointer-events-none z-50"
+      >+{{ value }}</span
+    >
   </Transition>
 </template>
 
@@ -36,7 +45,10 @@ span {
 }
 
 .v-leave-active {
-  transition: opacity 1s linear, top 1s linear, transform 1s linear;
+  transition:
+    opacity 1s linear,
+    top 1s linear,
+    transform 1s linear;
 }
 
 .v-leave-to {

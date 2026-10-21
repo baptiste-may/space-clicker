@@ -8,13 +8,17 @@ const pressed = ref(false);
 
 <template>
   <img
-      :class="[
-          'absolute left-1/2 top-1/2 -translate-1/2 cursor-pointer animate-[spin_5s_infinite_linear] transition-transform',
-          pressed ? 'scale-90' : ''
-      ]" alt=""
-      draggable=false src="/space-core.webp" @click="click"
-      @mousedown="pressed = true" @mouseup="pressed = false"
-  >
+    :class="[
+      'absolute left-1/2 top-1/2 -translate-1/2 cursor-pointer animate-[spin_5s_infinite_linear] transition-transform',
+      pressed ? 'scale-90' : '',
+    ]"
+    alt=""
+    draggable="false"
+    src="/space-core.webp"
+    @click="click"
+    @mousedown="pressed = true"
+    @mouseup="pressed = false"
+  />
 </template>
 
 <style scoped>

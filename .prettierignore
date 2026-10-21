@@ -1,0 +1,17 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Dependencies
+node_modules
+
+# Lockfiles
+bun.lock
+
+# IDE and generated assets
+.idea
+public

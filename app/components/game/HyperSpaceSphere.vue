@@ -14,8 +14,6 @@ const sphereColor = computed(() => {
 
 <template>
   <div
-      :class="[
-          'w-4 h-4 rounded-full shadow-[inset_0_0_4px_black] transition-colors',
-          sphereColor
-      ]"/>
+    :class="['w-4 h-4 rounded-full shadow-[inset_0_0_4px_black] transition-colors', sphereColor]"
+  />
 </template>

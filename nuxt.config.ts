@@ -5,7 +5,7 @@ const umamiId = process.env.NUXT_UMAMI_ID ?? process.env.NUXT_PUBLIC_UMAMI_ID;
 
 export default defineNuxtConfig({
   compatibilityDate: "2026-03-03",
-  modules: ["@nuxt/fonts", "nuxt-umami"],
+  modules: ["@nuxt/fonts", "nuxt-umami", "@nuxt/eslint"],
   fonts: {
     families: [
       {
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["./app/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
   components: [
     {
       path: "~/components",

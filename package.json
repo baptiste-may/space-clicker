@@ -3,24 +3,39 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
+  "packageManager": "bun@1.4.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "nuxt typecheck",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky"
   },
   "dependencies": {
     "@number-flow/vue": "^0.4.12",
     "@nuxt/fonts": "0.12.1",
     "@tailwindcss/vite": "^4.2.1",
-    "nuxt": "^4.3.1",
+    "nuxt": "^4.6.2",
     "nuxt-umami": "^3.2.1",
     "tailwindcss": "^4.2.1",
     "vue": "^3.5.29",
-    "vue-router": "^4.6.4"
+    "vue-router": "^5.4.0"
   },
   "devDependencies": {
-    "@types/node": "^24.11.0"
+    "@nuxt/eslint": "^1.17.0",
+    "@types/node": "^24.11.0",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.13"
   }
 }
