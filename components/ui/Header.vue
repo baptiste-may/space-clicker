@@ -4,7 +4,7 @@ const { openInfoModal } = useGame();
 
 <template>
   <UButton
-    class="absolute top-4 right-4"
+    class="absolute top-4 right-4 z-50"
     square
     color="neutral"
     variant="ghost"

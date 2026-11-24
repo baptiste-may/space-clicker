@@ -31,7 +31,7 @@ onMounted(() => {
   <Transition>
     <span
       v-if="appear"
-      class="absolute text-orange-600 text-shadow-lg text-2xl -translate-1/2 pointer-events-none z-50"
+      class="absolute text-black text-shadow-white text-shadow-lg text-2xl font-bold font-mono -translate-1/2 pointer-events-none z-50"
       >+{{ value }}</span
     >
   </Transition>

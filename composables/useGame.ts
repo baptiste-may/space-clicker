@@ -9,7 +9,6 @@ export type Sounds = keyof typeof soundsToPath;
 
 export const useGame = () => {
   const score = useState(() => 0);
-  const hyperspace = useState(() => 0);
 
   const volume = useState(() => DEFAULT_VOLUME);
   const clickAnimation = useState(() => true);
@@ -17,7 +16,6 @@ export const useGame = () => {
 
   return {
     score,
-    hyperspace,
     volume,
     changeVolume: (newVolume: number) => {
       if (!Number.isFinite(newVolume)) return;

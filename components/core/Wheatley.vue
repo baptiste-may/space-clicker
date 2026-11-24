@@ -45,7 +45,7 @@ const pressed = ref(false);
 <template>
   <img
     :class="[
-      'absolute -translate-1/2 cursor-pointer animate-[spin_5s_infinite_linear] transition-transform',
+      'absolute -translate-1/2 cursor-pointer animate-[spin_5s_infinite_linear] transition-transform duration-100',
       pressed ? 'scale-90' : '',
       !visible ? 'hidden' : '',
     ]"
