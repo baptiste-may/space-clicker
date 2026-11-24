@@ -14,6 +14,7 @@ const { score } = useGame();
             class="text-8xl font-bold px-2 text-black w-full"
             :value="score"
             :format="{
+              // @ts-ignore
               notation: score >= 1e12 ? 'scientific' : 'compact',
               maximumFractionDigits: 3,
             }"
